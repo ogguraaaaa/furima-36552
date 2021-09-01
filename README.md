@@ -24,11 +24,11 @@
 |---------------|------------|----------|
 | item_name     | string     | NOT NULL |
 | description   | text       | NOT NULL |
-| category      |            | NOT NULL |
-| condition     | text       | NOT NULL |
-| ship_fee      |            | NOT NULL |
-| ship_form     |            | NOT NULL |
-| ship_days     |            | NOT NULL |
+| category      | integer    | NOT NULL |
+| condition     | integer    | NOT NULL |
+| ship_fee      | integer    | NOT NULL |
+| prefecture    | integer    | NOT NULL |
+| ship_day      | integer    | NOT NULL |
 | price         | integer    | NOT NULL |
 
 ### Association
@@ -53,12 +53,12 @@
 
 | Column        | Type       | Options  |
 |---------------|------------|----------|
-| postal_code   | text       | NOT NULL |
-| prefectures   |            | NOT NULL |
-| municipalities | text      | NOT NULL |
-| address       | integer    | NOT NULL |
-| building      | text       |          |
-| number        | integer    | NOT NULL |
+| postal_code   | string     | NOT NULL |
+| prefecture    | integer    | NOT NULL |
+| city          | string     | NOT NULL |
+| address       | string     | NOT NULL |
+| building      | string     |          |
+| number        | string     | NOT NULL |
 
 ### Association
 
