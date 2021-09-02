@@ -24,7 +24,7 @@
 |---------------|------------|----------|
 | item_name     | string     | NOT NULL |
 | description   | text       | NOT NULL |
-| category_i    | integer    | NOT NULL |
+| category_id   | integer    | NOT NULL |
 | condition_id  | integer    | NOT NULL |
 | ship_fee_id   | integer    | NOT NULL |
 | prefecture_id    | integer    | NOT NULL |
@@ -59,7 +59,7 @@
 | address       | string     | NOT NULL |
 | building      | string     |          |
 | number        | string     | NOT NULL |
-| user          | references    | NOT NULL foreign_key: true |
+| purchase_histories | references | NOT NULL foreign_key: true |
 
 ### Association
 

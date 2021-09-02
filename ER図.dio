@@ -17,10 +17,10 @@
                     <mxGeometry y="26" width="240" height="124" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="orders" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="280" y="430" width="240" height="120" as="geometry"/>
+                    <mxGeometry x="280" y="430" width="240" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="Postal_code&#10;Prefecture_id&#10;City&#10;Address&#10;Building&#10;Number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="15" vertex="1">
-                    <mxGeometry y="26" width="240" height="94" as="geometry"/>
+                <mxCell id="16" value="Postal_code&#10;Prefecture_id&#10;City&#10;Address&#10;Building&#10;Number&#10;purchase_history_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="15" vertex="1">
+                    <mxGeometry y="26" width="240" height="114" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="purchase_histories" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="460" y="280" width="240" height="70" as="geometry"/>
