@@ -4,14 +4,14 @@
 
 | Column        | Type   | Options  |
 |---------------|--------|----------|
-| nickname      | string | NOT NULL |
-| email         | string | NOT NULL unique: true |
-| encrypted_password   | string | NOT NULL |
-| first_name    | string | NOT NULL |
-| last_name     | string | NOT NULL |
-| first_name_kana      | string | NOT NULL |
-| last_name_kana       | string | NOT NULL |
-| birthday      | date   | NOT NULL |
+| nickname      | string | null: false |
+| email         | string | null: false, unique: true |
+| encrypted_password   | string | null: false |
+| first_name    | string | null: false |
+| last_name     | string | null: false |
+| first_name_kana      | string | null: false |
+| last_name_kana       | string | null: false |
+| birthday      | date   | null: false |
 
 ### Association
 
@@ -22,15 +22,16 @@
 
 | Column        | Type       | Options  |
 |---------------|------------|----------|
-| item_name     | string     | NOT NULL |
-| description   | text       | NOT NULL |
-| category_id   | integer    | NOT NULL |
-| condition_id  | integer    | NOT NULL |
-| ship_fee_id   | integer    | NOT NULL |
-| prefecture_id    | integer    | NOT NULL |
-| ship_day_id   | integer    | NOT NULL |
-| price         | integer    | NOT NULL |
-
+| item_name     | string     | null: false |
+| description   | text       | null: false |
+| category_id   | integer    | null: false |
+| condition_id  | integer    | null: false |
+| ship_fee_id   | integer    | null: false |
+| prefecture_id    | integer    | null: false |
+| ship_day_id   | integer    | null: false |
+| price         | integer    | null: false |
+| user          | references | null: false, foreign_key: true |
+ 
 ### Association
 
  - belongs_to :user
@@ -40,8 +41,8 @@
 
 | Column        | Type       | Options  |
 |---------------|------------|----------|
-| user       | references | NOT NULL foreign_key: true |
-| item       | references | NOT NILL foreign_key: true |
+| user       | references | null: false, foreign_key: true |
+| item       | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -53,13 +54,13 @@
 
 | Column        | Type       | Options  |
 |---------------|------------|----------|
-| postal_code   | string     | NOT NULL |
-| prefecture_id    | integer    | NOT NULL |
-| city          | string     | NOT NULL |
-| address       | string     | NOT NULL |
+| postal_code   | string     | null: false |
+| prefecture_id    | integer    | null: false |
+| city          | string     | null: false |
+| address       | string     | null: false |
 | building      | string     |          |
-| number        | string     | NOT NULL |
-| purchase_history | references | NOT NULL foreign_key: true |
+| number        | string     | null: false |
+| purchase_history | references | null: false, foreign_key: true |
 
 ### Association
 
