@@ -59,7 +59,7 @@
 | address       | string     | NOT NULL |
 | building      | string     |          |
 | number        | string     | NOT NULL |
-| purchase_histories | references | NOT NULL foreign_key: true |
+| purchase_history | references | NOT NULL foreign_key: true |
 
 ### Association
 
