@@ -5,7 +5,7 @@
 | Column        | Type   | Options  |
 |---------------|--------|----------|
 | nickname      | string | NOT NULL |
-| email         | string | NOT NULL |
+| email         | string | NOT NULL unique: true |
 | encrypted_password   | string | NOT NULL |
 | first_name    | string | NOT NULL |
 | last_name     | string | NOT NULL |
@@ -24,24 +24,24 @@
 |---------------|------------|----------|
 | item_name     | string     | NOT NULL |
 | description   | text       | NOT NULL |
-| category      | integer    | NOT NULL |
-| condition     | integer    | NOT NULL |
-| ship_fee      | integer    | NOT NULL |
+| category_i    | integer    | NOT NULL |
+| condition_id  | integer    | NOT NULL |
+| ship_fee_id   | integer    | NOT NULL |
 | prefecture_id    | integer    | NOT NULL |
-| ship_day      | integer    | NOT NULL |
+| ship_day_id   | integer    | NOT NULL |
 | price         | integer    | NOT NULL |
 
 ### Association
 
  - belongs_to :user
- - has_many :purchase_histories
+ - has_one :purchase_history
 
-## purchase history テーブル
+## purchase histories テーブル
 
 | Column        | Type       | Options  |
 |---------------|------------|----------|
-| user_id       | references | NOT NULL foreign_key: true |
-| item_id       | references | NOT NILL foreign_key: true |
+| user       | references | NOT NULL foreign_key: true |
+| item       | references | NOT NILL foreign_key: true |
 
 ### Association
 
@@ -59,6 +59,7 @@
 | address       | string     | NOT NULL |
 | building      | string     |          |
 | number        | string     | NOT NULL |
+| user          | references    | NOT NULL foreign_key: true |
 
 ### Association
 
