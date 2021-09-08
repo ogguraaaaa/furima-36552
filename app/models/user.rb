@@ -25,10 +25,4 @@ class User < ApplicationRecord
   end
 end
 
-# validates :password, presence: true REGEX
-# validates :nickname, presence: true
-# validates :first_name, presence: true 全角
-# validates :last_name, presence: true 全角
-# validates :first_name_kana, presence: true カナ
-# validates :last_name_kana, presence: true カナ
-# validates :birthday, presence: true
+
