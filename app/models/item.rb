@@ -13,7 +13,7 @@ class Item < ApplicationRecord
     validates :image
     validates :item_name
     validates :description
-    validates :price, numericality: { less_than_or_equal_to: 9999999, greater_than_or_equal_to: 300 }
+    validates :price, numericality: { less_than_or_equal_to: 9_999_999, greater_than_or_equal_to: 300 }
   end
 
   validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
@@ -22,7 +22,6 @@ class Item < ApplicationRecord
   validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :ship_day_id, numericality: { other_than: 1, message: "can't be blank" }
 
-  #画像必須のバリデーション
-  #値段ni半角英数のみのバリデーション
-
+  # 画像必須のバリデーション
+  # 値段ni半角英数のみのバリデーション
 end
