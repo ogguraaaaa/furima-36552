@@ -23,6 +23,5 @@ class Item < ApplicationRecord
   validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :ship_day_id, numericality: { other_than: 1, message: "can't be blank" }
 
-  # 画像必須のバリデーション
-  # 値段ni半角英数のみのバリデーション
+  
 end
