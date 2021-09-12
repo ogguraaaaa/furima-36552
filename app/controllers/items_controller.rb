@@ -27,5 +27,3 @@ class ItemsController < ApplicationController
                                  :ship_day_id, :price).merge(user_id: current_user.id)
   end
 end
-
-

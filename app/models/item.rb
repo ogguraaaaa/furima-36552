@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
-  has_one :purchase_history
+  # has_one :purchase_history
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
@@ -22,6 +22,4 @@ class Item < ApplicationRecord
   validates :ship_fee_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :ship_day_id, numericality: { other_than: 1, message: "can't be blank" }
-
-  
 end
