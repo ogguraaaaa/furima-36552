@@ -1,7 +1,7 @@
 class PurchaseHistoriesController < ApplicationController
   before_action :set_item, only: [:index, :create]
   before_action :authenticate_user!, only: [:index, :create]
-  before_action :purchase_history_url, only: [:index, :crate]
+  before_action :purchase_history_url, only: [:index, :create]
 
   def index
     @order_purchase_history = OrderPurchaseHistory.new
