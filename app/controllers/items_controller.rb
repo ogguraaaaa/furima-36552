@@ -50,12 +50,10 @@ class ItemsController < ApplicationController
   end
 
   def check_user
-    @item = Item.find(params[:id])
     redirect_to root_path unless current_user == @item.user
   end
 
   def edit_cancel
-    @item = Item.find(params[:id])
     redirect_to root_path if @item.purchase_history.present?
   end
 end

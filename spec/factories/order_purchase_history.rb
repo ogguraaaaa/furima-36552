@@ -6,5 +6,6 @@ FactoryBot.define do
     address { '5-2' }
     prefecture_id { 10 }
     token { 'tok_abcdefghijk00000000000000000' }
+    building { '丸の内校' }
   end
 end
