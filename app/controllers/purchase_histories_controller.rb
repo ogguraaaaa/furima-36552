@@ -31,7 +31,7 @@ class PurchaseHistoriesController < ApplicationController
   end
 
   def pay_item
-    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
       amount: @item.price,
       card: params_permit[:token],
@@ -43,5 +43,3 @@ class PurchaseHistoriesController < ApplicationController
     redirect_to root_path if @item.user_id == current_user.id || !@item.purchase_history.nil?
   end
 end
-
-
