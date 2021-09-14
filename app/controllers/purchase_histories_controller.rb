@@ -10,6 +10,7 @@ class PurchaseHistoriesController < ApplicationController
   def create
     @order_purchase_history = OrderPurchaseHistory.new(params_permit)
     if @order_purchase_history.valid?
+      pay_item
       @order_purchase_history.save
       redirect_to root_path
     else
@@ -29,7 +30,18 @@ class PurchaseHistoriesController < ApplicationController
     @item = Item.find(params[:item_id])
   end
 
+  def pay_item
+    Payjp.api_key = "sk_test_f9784dfe7a481a4a1cf27298"
+    Payjp::Charge.create(
+      amount: @item.price,
+      card: params_permit[:token],
+      currency: 'jpy'
+    )
+  end
+
   def purchase_history_url
     redirect_to root_path if @item.user_id == current_user.id || !@item.purchase_history.nil?
   end
 end
+
+
